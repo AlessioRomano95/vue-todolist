@@ -30,27 +30,20 @@
 
     <div class="new-task">
 
-      <input  placeholder="Nuovo task"type="text">
-      <button >Aggiungi</button>
+      <input 
+        v-model= "newTask"
+        placeholder="Nuovo task"type="text"
+        @keyup.enter="addTask"
+      >
+
+      <button @click="addTask">Aggiungi</button>
       <p class="error"></p>
     </div>
 
     <div class="task-container">
       <ul>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </li>
-        <li>
-          <span>task....</span>
+        <li v-for="(task, indice) in todoList">
+          <span>{{ task }}</span>
           <i class="fa-solid fa-trash-can"></i>
         </li>
 
@@ -61,6 +54,6 @@
 
   </div>
 
-  <script src="js/script.js"></script>
+  <script src="asset/script.js"></script>
 </body>
 </html>

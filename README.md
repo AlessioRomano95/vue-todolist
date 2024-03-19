@@ -26,5 +26,3 @@ Oltre al click sul pulsante, intercettare anche il tasto ENTER per aggiungere il
 - cliccando sul testo dell’item, invertire il valore della proprietà done del todo corrispondente (se done era uguale a false, impostare true e viceversa)
 - rendere eliminabili solo i task con done === true. In caso contrario esporre un messaggio di errore diverso dal precedente
 - Se la lista è vuota stampare “Non sono presenti task” al posto della lista
-NB: vi lascio in allegato il markup così vi potete concentrare solo sulla logica :occhiolino: e non ringraziatemi…  :ugodeughi:
-Buon lavoro e buon divertimento
