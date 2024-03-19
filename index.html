@@ -31,21 +31,23 @@
     <div class="new-task">
 
       <input 
-        v-model= "newTask"
+        v-model.trim= "newTask"
         placeholder="Nuovo task"type="text"
         @keyup.enter="addTask"
       >
 
       <button @click="addTask">Aggiungi</button>
-      <p class="error"></p>
+      <p class="error">{{erroreMsg}}</p>
     </div>
 
     <div class="task-container">
       <ul>
         <li v-for="(task, indice) in todoList">
-          <span>{{ task }}</span>
+          <span>{{task.text}}</span>
+          <span>{{newTask}}</span>
           <i class="fa-solid fa-trash-can"></i>
         </li>
+        
 
       </ul>
 
